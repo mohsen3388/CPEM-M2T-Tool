@@ -1,0 +1,189 @@
+[
+  {
+    "cpdm_source_id": "",
+    "cpdm_source_name": "",
+    "cpdm_source_stereotype": "",
+    "cpem_id": "ASSET",
+    "cpem_name": "RoughDiamond",
+    "cpem_stereotype": "TokenizedAsset",
+    "m2t_artifact": "",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "not-traced"
+  },
+  {
+    "cpdm_source_id": "",
+    "cpdm_source_name": "",
+    "cpdm_source_stereotype": "",
+    "cpem_id": "SC",
+    "cpem_name": "P0 - Purchasing Diamond with Insurance",
+    "cpem_stereotype": "SmartContract",
+    "m2t_artifact": "contract P0PurchasingDiamondWithInsuranceContract",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "not-traced"
+  },
+  {
+    "cpdm_source_id": "SRC_A1",
+    "cpdm_source_name": "A1. Select Diamond",
+    "cpdm_source_stereotype": "CPDM Activity",
+    "cpem_id": "F1",
+    "cpem_name": "SelectDiamond",
+    "cpem_stereotype": "ContractFunction",
+    "m2t_artifact": "function selectDiamond()",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "traced"
+  },
+  {
+    "cpdm_source_id": "SRC_A2",
+    "cpdm_source_name": "A2. Create Order",
+    "cpdm_source_stereotype": "CPDM Activity",
+    "cpem_id": "F2",
+    "cpem_name": "CreateOrder",
+    "cpem_stereotype": "ContractFunction",
+    "m2t_artifact": "function createOrder()",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "traced"
+  },
+  {
+    "cpdm_source_id": "SRC_A3",
+    "cpdm_source_name": "A3. Make Payment",
+    "cpdm_source_stereotype": "CPDM Activity",
+    "cpem_id": "F3",
+    "cpem_name": "MakePayment",
+    "cpem_stereotype": "ContractFunction",
+    "m2t_artifact": "function makePayment()",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "traced"
+  },
+  {
+    "cpdm_source_id": "SRC_A4",
+    "cpdm_source_name": "A4. Issue Insurance",
+    "cpdm_source_stereotype": "CPDM Activity",
+    "cpem_id": "F4",
+    "cpem_name": "IssueInsurance",
+    "cpem_stereotype": "ContractFunction",
+    "m2t_artifact": "function issueInsurance()",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "traced"
+  },
+  {
+    "cpdm_source_id": "SRC_A5",
+    "cpdm_source_name": "A5. Arrange Transport",
+    "cpdm_source_stereotype": "CPDM Activity",
+    "cpem_id": "F5",
+    "cpem_name": "ArrangeTransport",
+    "cpem_stereotype": "ContractFunction",
+    "m2t_artifact": "function arrangeTransport()",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "traced"
+  },
+  {
+    "cpdm_source_id": "SRC_A6",
+    "cpdm_source_name": "A6. Confirm Delivery",
+    "cpdm_source_stereotype": "CPDM Activity",
+    "cpem_id": "F6",
+    "cpem_name": "ConfirmDelivery",
+    "cpem_stereotype": "ContractFunction",
+    "m2t_artifact": "function confirmDelivery()",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "traced"
+  },
+  {
+    "cpdm_source_id": "SRC_A7",
+    "cpdm_source_name": "A7. Quality Control",
+    "cpdm_source_stereotype": "CPDM Activity",
+    "cpem_id": "F7",
+    "cpem_name": "QualityControl",
+    "cpem_stereotype": "ContractFunction",
+    "m2t_artifact": "function qualityControl()",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "traced"
+  },
+  {
+    "cpdm_source_id": "SRC_A8",
+    "cpdm_source_name": "A8. Complete Order",
+    "cpdm_source_stereotype": "CPDM Activity",
+    "cpem_id": "F8",
+    "cpem_name": "CompleteOrder",
+    "cpem_stereotype": "ContractFunction",
+    "m2t_artifact": "function completeOrder()",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "traced"
+  },
+  {
+    "cpdm_source_id": "SRC_D1",
+    "cpdm_source_name": "D1. Quality Approved?",
+    "cpdm_source_stereotype": "CPDM Decision",
+    "cpem_id": "D1",
+    "cpem_name": "D1. Quality Approved?",
+    "cpem_stereotype": "Decision",
+    "m2t_artifact": "",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "traced"
+  },
+  {
+    "cpdm_source_id": "SRC_E1",
+    "cpdm_source_name": "Delivery Confirmed",
+    "cpdm_source_stereotype": "CPDM Event",
+    "cpem_id": "EV1",
+    "cpem_name": "DeliveryConfirmed",
+    "cpem_stereotype": "BlockchainEvent",
+    "m2t_artifact": "event DeliveryConfirmed",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "traced"
+  },
+  {
+    "cpdm_source_id": "SRC_RISK",
+    "cpdm_source_name": "Risk Transport",
+    "cpdm_source_stereotype": "CPDM RiskAssessment",
+    "cpem_id": "RISK",
+    "cpem_name": "RISK_TRANSPORT",
+    "cpem_stereotype": "ExecutionRisk",
+    "m2t_artifact": "",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "traced"
+  },
+  {
+    "cpdm_source_id": "SRC_TRACE",
+    "cpdm_source_name": "TRC_ALL_EVENTS",
+    "cpdm_source_stereotype": "CPDM TraceabilityRule",
+    "cpem_id": "TRACE",
+    "cpem_name": "TRC_ALL_EVENTS",
+    "cpem_stereotype": "ExecutionTraceabilityRule",
+    "m2t_artifact": "",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "traced"
+  },
+  {
+    "cpdm_source_id": "SRC_MET",
+    "cpdm_source_name": "MET_DELIVERY_TIME",
+    "cpdm_source_stereotype": "CPDM Metric",
+    "cpem_id": "MET",
+    "cpem_name": "MET_DELIVERY_TIME",
+    "cpem_stereotype": "ExecutionMetric",
+    "m2t_artifact": "",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "traced"
+  },
+  {
+    "cpdm_source_id": "SRC_IND",
+    "cpdm_source_name": "IND_DELIVERY_COMPLIANCE",
+    "cpdm_source_stereotype": "CPDM Indicator",
+    "cpem_id": "IND",
+    "cpem_name": "IND_DELIVERY_COMPLIANCE",
+    "cpem_stereotype": "ExecutionIndicator",
+    "m2t_artifact": "",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "traced"
+  },
+  {
+    "cpdm_source_id": "SRC_OKR",
+    "cpdm_source_name": "OKR_DELIVERY",
+    "cpdm_source_stereotype": "CPDM Objective",
+    "cpem_id": "OKR",
+    "cpem_name": "OKR_DELIVERY",
+    "cpem_stereotype": "ExecutionOKR",
+    "m2t_artifact": "",
+    "solidity_file": "P0PurchasingDiamondWithInsuranceContract.sol",
+    "trace_status": "traced"
+  }
+]

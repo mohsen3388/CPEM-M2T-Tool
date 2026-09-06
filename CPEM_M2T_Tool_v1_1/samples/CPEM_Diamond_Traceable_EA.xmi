@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3">
+  <XMI.header>
+    <XMI.documentation>
+      <XMI.exporter>ChatGPT - EA compatible UML XMI</XMI.exporter>
+      <XMI.exporterVersion>1.0</XMI.exporterVersion>
+    </XMI.documentation>
+  </XMI.header>
+  <XMI.content>
+    <UML:Model xmi.id="M_CPEM" name="CPEM Diamond Supply Chain - Simplified and Traceable">
+      <UML:Namespace.ownedElement>
+        <UML:Stereotype xmi.id="ST_actor" name="SupplyChainActor" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_asset" name="TokenizedAsset" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_sc" name="SmartContract" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_sm" name="StateMachine" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_state" name="ContractState" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_fun" name="ContractFunction" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_dec" name="Decision" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_trans" name="StateTransition" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_event" name="BlockchainEvent" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_risk" name="ExecutionRisk" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_trace" name="ExecutionTraceabilityRule" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_metric" name="ExecutionMetric" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_ind" name="ExecutionIndicator" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_okr" name="ExecutionOKR" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_cpdmAct" name="CPDM Activity" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_cpdmDec" name="CPDM Decision" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_cpdmEvent" name="CPDM Event" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_cpdmRisk" name="CPDM RiskAssessment" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_cpdmTrace" name="CPDM TraceabilityRule" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_cpdmMetric" name="CPDM Metric" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_cpdmInd" name="CPDM Indicator" baseClass="Class"/>
+        <UML:Stereotype xmi.id="ST_cpdmObj" name="CPDM Objective" baseClass="Class"/>
+
+        <UML:Package xmi.id="PKG_EXEC" name="CPEM Execution Model">
+          <UML:Namespace.ownedElement>
+            <UML:Class xmi.id="ACT1" name="End Buyer">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_actor"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="ACT1_A0" name="id" type="String"><UML:Attribute.initialValue><UML:Expression body="ACTOR-END-BUYER"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="ACT1_A1" name="role" type="String"><UML:Attribute.initialValue><UML:Expression body="BUYER"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="ACT2" name="Seville Jewellery Shop">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_actor"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="ACT2_A0" name="id" type="String"><UML:Attribute.initialValue><UML:Expression body="ACTOR-SEVILLE-RETAILER"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="ACT2_A1" name="role" type="String"><UML:Attribute.initialValue><UML:Expression body="RETAILER"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="ACT3" name="Cape Town Diamonds">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_actor"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="ACT3_A0" name="id" type="String"><UML:Attribute.initialValue><UML:Expression body="ACTOR-CAPE-TOWN-SUPPLIER"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="ACT3_A1" name="role" type="String"><UML:Attribute.initialValue><UML:Expression body="SUPPLIER"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="ACT4" name="Lesotho Mine">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_actor"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="ACT4_A0" name="id" type="String"><UML:Attribute.initialValue><UML:Expression body="ACTOR-LESOTHO-MINE"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="ACT4_A1" name="role" type="String"><UML:Attribute.initialValue><UML:Expression body="MINE"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="ACT5" name="Insurance Provider">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_actor"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="ACT5_A0" name="id" type="String"><UML:Attribute.initialValue><UML:Expression body="ACTOR-INSURANCE"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="ACT5_A1" name="role" type="String"><UML:Attribute.initialValue><UML:Expression body="INSURANCE"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="ACT6" name="Transport / Logistics">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_actor"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="ACT6_A0" name="id" type="String"><UML:Attribute.initialValue><UML:Expression body="ACTOR-TRANSPORT"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="ACT6_A1" name="role" type="String"><UML:Attribute.initialValue><UML:Expression body="LOGISTICS"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="ASSET" name="RoughDiamond">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_asset"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="ASSET_A0" name="id" type="String"><UML:Attribute.initialValue><UML:Expression body="PROD-ROUGH-DIAMOND"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="ASSET_A1" name="tokenId" type="uint256"><UML:Attribute.initialValue><UML:Expression body=""/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="ASSET_A2" name="tokenType" type="String"><UML:Attribute.initialValue><UML:Expression body="ERC721"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="ASSET_A3" name="currentOwner" type="address"><UML:Attribute.initialValue><UML:Expression body=""/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="SC" name="P0 - Purchasing Diamond with Insurance">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_sc"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="SC_A0" name="id" type="String"><UML:Attribute.initialValue><UML:Expression body="PROC-P0"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="SC_A1" name="version" type="String"><UML:Attribute.initialValue><UML:Expression body="1.0"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="SC_A2" name="state" type="ContractState"><UML:Attribute.initialValue><UML:Expression body="Created"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="SC_A3" name="deployedAddress" type="String"><UML:Attribute.initialValue><UML:Expression body="UNDEPLOYED"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="SC_A4" name="createdAt" type="uint256"><UML:Attribute.initialValue><UML:Expression body=""/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="SM" name="DiamondLifecycle">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_sm"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="SM_A0" name="initialState" type="String"><UML:Attribute.initialValue><UML:Expression body="Created"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="SM_A1" name="currentState" type="ContractState"><UML:Attribute.initialValue><UML:Expression body="Created"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="STATE_Created" name="Created">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_state"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="STATE_Ordered" name="Ordered">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_state"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="STATE_Paid" name="Paid">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_state"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="STATE_Insured" name="Insured">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_state"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="STATE_InTransport" name="InTransport">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_state"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="STATE_Delivered" name="Delivered">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_state"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="STATE_QualityApproved" name="QualityApproved">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_state"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="STATE_Completed" name="Completed">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_state"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="STATE_Rejected" name="Rejected">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_state"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="F1" name="SelectDiamond">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_fun"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="F1_A0" name="payable" type="Boolean"><UML:Attribute.initialValue><UML:Expression body="false"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="F2" name="CreateOrder">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_fun"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="F2_A0" name="payable" type="Boolean"><UML:Attribute.initialValue><UML:Expression body="false"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="F3" name="MakePayment">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_fun"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="F3_A0" name="payable" type="Boolean"><UML:Attribute.initialValue><UML:Expression body="false"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="F4" name="IssueInsurance">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_fun"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="F4_A0" name="payable" type="Boolean"><UML:Attribute.initialValue><UML:Expression body="false"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="F5" name="ArrangeTransport">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_fun"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="F5_A0" name="payable" type="Boolean"><UML:Attribute.initialValue><UML:Expression body="false"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="F6" name="ConfirmDelivery">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_fun"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="F6_A0" name="payable" type="Boolean"><UML:Attribute.initialValue><UML:Expression body="false"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="F7" name="QualityControl">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_fun"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="F7_A0" name="payable" type="Boolean"><UML:Attribute.initialValue><UML:Expression body="false"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="F8" name="CompleteOrder">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_fun"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="F8_A0" name="payable" type="Boolean"><UML:Attribute.initialValue><UML:Expression body="false"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="D1" name="D1. Quality Approved?">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_dec"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="D1_A0" name="condition" type="Boolean"><UML:Attribute.initialValue><UML:Expression body="qualityApproved"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="TR_REJ" name="Rejected">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_trans"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="TR_REJ_A0" name="targetState" type="String"><UML:Attribute.initialValue><UML:Expression body="Rejected"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="EV1" name="DeliveryConfirmed">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_event"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="EV1_A0" name="eventId" type="String"><UML:Attribute.initialValue><UML:Expression body="EVT-DELIVERY-CONFIRMED"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="EV1_A1" name="timestamp" type="uint256"><UML:Attribute.initialValue><UML:Expression body=""/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="EV1_A2" name="shipmentId" type="String"><UML:Attribute.initialValue><UML:Expression body=""/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="RISK" name="RISK_TRANSPORT">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_risk"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="RISK_A0" name="id" type="String"><UML:Attribute.initialValue><UML:Expression body="RISK-TRANSPORT-001"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="RISK_A1" name="level" type="String"><UML:Attribute.initialValue><UML:Expression body="Medium"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="TRACE" name="TRC_ALL_EVENTS">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_trace"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="TRACE_A0" name="id" type="String"><UML:Attribute.initialValue><UML:Expression body="TRC-ALL-EVENTS"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="TRACE_A1" name="verificationMethod" type="String"><UML:Attribute.initialValue><UML:Expression body="System"/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="MET" name="MET_DELIVERY_TIME">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_metric"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="MET_A0" name="id" type="String"><UML:Attribute.initialValue><UML:Expression body="MET-DELIVERY-TIME"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="MET_A1" name="unit" type="String"><UML:Attribute.initialValue><UML:Expression body="hours"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="MET_A2" name="targetValue" type="double"><UML:Attribute.initialValue><UML:Expression body=""/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="IND" name="IND_DELIVERY_COMPLIANCE">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_ind"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="IND_A0" name="id" type="String"><UML:Attribute.initialValue><UML:Expression body="IND-DELIVERY-COMPLIANCE"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="IND_A1" name="calculation" type="String"><UML:Attribute.initialValue><UML:Expression body=""/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="IND_A2" name="value" type="double"><UML:Attribute.initialValue><UML:Expression body=""/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="OKR" name="OKR_DELIVERY">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_okr"/></UML:ModelElement.stereotype>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id="OKR_A0" name="id" type="String"><UML:Attribute.initialValue><UML:Expression body="OKR-DELIVERY"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="OKR_A1" name="target" type="String"><UML:Attribute.initialValue><UML:Expression body="Secure and On-Time Diamond Delivery"/></UML:Attribute.initialValue></UML:Attribute>
+                <UML:Attribute xmi.id="OKR_A2" name="currentValue" type="double"><UML:Attribute.initialValue><UML:Expression body=""/></UML:Attribute.initialValue></UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Class xmi.id="SRC_A1" name="A1. Select Diamond">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_cpdmAct"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="SRC_A2" name="A2. Create Order">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_cpdmAct"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="SRC_A3" name="A3. Make Payment">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_cpdmAct"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="SRC_A4" name="A4. Issue Insurance">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_cpdmAct"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="SRC_A5" name="A5. Arrange Transport">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_cpdmAct"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="SRC_A6" name="A6. Confirm Delivery">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_cpdmAct"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="SRC_A7" name="A7. Quality Control">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_cpdmAct"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="SRC_A8" name="A8. Complete Order">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_cpdmAct"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="SRC_D1" name="D1. Quality Approved?">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_cpdmDec"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="SRC_E1" name="Delivery Confirmed">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_cpdmEvent"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="SRC_RISK" name="Risk Transport">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_cpdmRisk"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="SRC_TRACE" name="TRC_ALL_EVENTS">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_cpdmTrace"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="SRC_MET" name="MET_DELIVERY_TIME">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_cpdmMetric"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="SRC_IND" name="IND_DELIVERY_COMPLIANCE">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_cpdmInd"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Class xmi.id="SRC_OKR" name="OKR_DELIVERY">
+              <UML:ModelElement.stereotype><UML:Stereotype xmi.idref="ST_cpdmObj"/></UML:ModelElement.stereotype>
+            </UML:Class>
+            <UML:Association xmi.id="A_ACT1" name="participatesIn"><UML:Association.connection><UML:AssociationEnd xmi.id="A_ACT1a" type="ACT1" aggregation="none"/><UML:AssociationEnd xmi.id="A_ACT1b" type="SC" aggregation="none"/></UML:Association.connection></UML:Association>
+            <UML:Association xmi.id="A_ACT2" name="participatesIn"><UML:Association.connection><UML:AssociationEnd xmi.id="A_ACT2a" type="ACT2" aggregation="none"/><UML:AssociationEnd xmi.id="A_ACT2b" type="SC" aggregation="none"/></UML:Association.connection></UML:Association>
+            <UML:Association xmi.id="A_ACT3" name="participatesIn"><UML:Association.connection><UML:AssociationEnd xmi.id="A_ACT3a" type="ACT3" aggregation="none"/><UML:AssociationEnd xmi.id="A_ACT3b" type="SC" aggregation="none"/></UML:Association.connection></UML:Association>
+            <UML:Association xmi.id="A_ACT4" name="participatesIn"><UML:Association.connection><UML:AssociationEnd xmi.id="A_ACT4a" type="ACT4" aggregation="none"/><UML:AssociationEnd xmi.id="A_ACT4b" type="SC" aggregation="none"/></UML:Association.connection></UML:Association>
+            <UML:Association xmi.id="A_ACT5" name="participatesIn"><UML:Association.connection><UML:AssociationEnd xmi.id="A_ACT5a" type="ACT5" aggregation="none"/><UML:AssociationEnd xmi.id="A_ACT5b" type="SC" aggregation="none"/></UML:Association.connection></UML:Association>
+            <UML:Association xmi.id="A_ACT6" name="participatesIn"><UML:Association.connection><UML:AssociationEnd xmi.id="A_ACT6a" type="ACT6" aggregation="none"/><UML:AssociationEnd xmi.id="A_ACT6b" type="SC" aggregation="none"/></UML:Association.connection></UML:Association>
+            <UML:Association xmi.id="A_ASSET" name="manages"><UML:Association.connection><UML:AssociationEnd xmi.id="A_ASSETa" type="ASSET" aggregation="none"/><UML:AssociationEnd xmi.id="A_ASSETb" type="SC" aggregation="composite"/></UML:Association.connection></UML:Association>
+            <UML:Association xmi.id="A_SM" name="controls"><UML:Association.connection><UML:AssociationEnd xmi.id="A_SMa" type="SC" aggregation="composite"/><UML:AssociationEnd xmi.id="A_SMb" type="SM" aggregation="none"/></UML:Association.connection></UML:Association>
+            <UML:Association xmi.id="A_F1" name="containsFunction"><UML:Association.connection><UML:AssociationEnd xmi.id="A_F1a" type="SC" aggregation="composite"/><UML:AssociationEnd xmi.id="A_F1b" type="F1" aggregation="none"/></UML:Association.connection></UML:Association>
+            <UML:Association xmi.id="A_F2" name="containsFunction"><UML:Association.connection><UML:AssociationEnd xmi.id="A_F2a" type="SC" aggregation="composite"/><UML:AssociationEnd xmi.id="A_F2b" type="F2" aggregation="none"/></UML:Association.connection></UML:Association>
+            <UML:Association xmi.id="A_F3" name="containsFunction"><UML:Association.connection><UML:AssociationEnd xmi.id="A_F3a" type="SC" aggregation="composite"/><UML:AssociationEnd xmi.id="A_F3b" type="F3" aggregation="none"/></UML:Association.connection></UML:Association>
+            <UML:Association xmi.id="A_F4" name="containsFunction"><UML:Association.connection><UML:AssociationEnd xmi.id="A_F4a" type="SC" aggregation="composite"/><UML:AssociationEnd xmi.id="A_F4b" type="F4" aggregation="none"/></UML:Association.connection></UML:Association>
+            <UML:Association xmi.id="A_F5" name="containsFunction"><UML:Association.connection><UML:AssociationEnd xmi.id="A_F5a" type="SC" aggregation="composite"/><UML:AssociationEnd xmi.id="A_F5b" type="F5" aggregation="none"/></UML:Association.connection></UML:Association>
+            <UML:Association xmi.id="A_F6" name="containsFunction"><UML:Association.connection><UML:AssociationEnd xmi.id="A_F6a" type="SC" aggregation="composite"/><UML:AssociationEnd xmi.id="A_F6b" type="F6" aggregation="none"/></UML:Association.connection></UML:Association>
+            <UML:Association xmi.id="A_F7" name="containsFunction"><UML:Association.connection><UML:AssociationEnd xmi.id="A_F7a" type="SC" aggregation="composite"/><UML:AssociationEnd xmi.id="A_F7b" type="F7" aggregation="none"/></UML:Association.connection></UML:Association>
+            <UML:Association xmi.id="A_F8" name="containsFunction"><UML:Association.connection><UML:AssociationEnd xmi.id="A_F8a" type="SC" aggregation="composite"/><UML:AssociationEnd xmi.id="A_F8b" type="F8" aggregation="none"/></UML:Association.connection></UML:Association>
+            <UML:Dependency xmi.id="D_NEXT1" name="next" client="F1" supplier="F2"/>
+            <UML:Dependency xmi.id="D_NEXT2" name="next" client="F2" supplier="F3"/>
+            <UML:Dependency xmi.id="D_NEXT3" name="next" client="F3" supplier="F4"/>
+            <UML:Dependency xmi.id="D_NEXT4" name="next" client="F4" supplier="F5"/>
+            <UML:Dependency xmi.id="D_NEXT5" name="next" client="F5" supplier="F6"/>
+            <UML:Dependency xmi.id="D_NEXT6" name="next" client="F6" supplier="F7"/>
+            <UML:Dependency xmi.id="D_NEXT7" name="next" client="F7" supplier="F8"/>
+            <UML:Dependency xmi.id="D_EVAL" name="evaluates" client="F7" supplier="D1"/>
+            <UML:Dependency xmi.id="D_YES" name="yes" client="D1" supplier="F8"/>
+            <UML:Dependency xmi.id="D_NO" name="no" client="D1" supplier="TR_REJ"/>
+            <UML:Dependency xmi.id="D_EMIT" name="emits" client="F6" supplier="EV1"/>
+            <UML:Dependency xmi.id="TR_A1" name="traceFrom" client="F1" supplier="SRC_A1"/>
+            <UML:Dependency xmi.id="TR_A2" name="traceFrom" client="F2" supplier="SRC_A2"/>
+            <UML:Dependency xmi.id="TR_A3" name="traceFrom" client="F3" supplier="SRC_A3"/>
+            <UML:Dependency xmi.id="TR_A4" name="traceFrom" client="F4" supplier="SRC_A4"/>
+            <UML:Dependency xmi.id="TR_A5" name="traceFrom" client="F5" supplier="SRC_A5"/>
+            <UML:Dependency xmi.id="TR_A6" name="traceFrom" client="F6" supplier="SRC_A6"/>
+            <UML:Dependency xmi.id="TR_A7" name="traceFrom" client="F7" supplier="SRC_A7"/>
+            <UML:Dependency xmi.id="TR_A8" name="traceFrom" client="F8" supplier="SRC_A8"/>
+            <UML:Dependency xmi.id="TR_D1" name="traceFrom" client="D1" supplier="SRC_D1"/>
+            <UML:Dependency xmi.id="TR_E1" name="traceFrom" client="EV1" supplier="SRC_E1"/>
+            <UML:Dependency xmi.id="TR_RISK" name="traceFrom" client="RISK" supplier="SRC_RISK"/>
+            <UML:Dependency xmi.id="TR_TRACE" name="traceFrom" client="TRACE" supplier="SRC_TRACE"/>
+            <UML:Dependency xmi.id="TR_MET" name="traceFrom" client="MET" supplier="SRC_MET"/>
+            <UML:Dependency xmi.id="TR_IND" name="traceFrom" client="IND" supplier="SRC_IND"/>
+            <UML:Dependency xmi.id="TR_OKR" name="traceFrom" client="OKR" supplier="SRC_OKR"/>
+            <UML:Dependency xmi.id="G1" name="mitigates" client="RISK" supplier="TRACE"/>
+            <UML:Dependency xmi.id="G2" name="measures" client="TRACE" supplier="MET"/>
+            <UML:Dependency xmi.id="G3" name="provides" client="MET" supplier="IND"/>
+            <UML:Dependency xmi.id="G4" name="supports" client="IND" supplier="OKR"/>
+          </UML:Namespace.ownedElement>
+        </UML:Package>
+      </UML:Namespace.ownedElement>
+    </UML:Model>
+  </XMI.content>
+</XMI>

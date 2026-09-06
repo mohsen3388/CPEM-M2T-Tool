@@ -1,0 +1,18 @@
+cpdm_source_id,cpdm_source_name,cpdm_source_stereotype,cpem_id,cpem_name,cpem_stereotype,m2t_artifact,solidity_file,trace_status
+,,,ASSET,RoughDiamond,TokenizedAsset,,P0PurchasingDiamondWithInsuranceContract.sol,not-traced
+,,,SC,P0 - Purchasing Diamond with Insurance,SmartContract,contract P0PurchasingDiamondWithInsuranceContract,P0PurchasingDiamondWithInsuranceContract.sol,not-traced
+SRC_A1,A1. Select Diamond,CPDM Activity,F1,SelectDiamond,ContractFunction,function selectDiamond(),P0PurchasingDiamondWithInsuranceContract.sol,traced
+SRC_A2,A2. Create Order,CPDM Activity,F2,CreateOrder,ContractFunction,function createOrder(),P0PurchasingDiamondWithInsuranceContract.sol,traced
+SRC_A3,A3. Make Payment,CPDM Activity,F3,MakePayment,ContractFunction,function makePayment(),P0PurchasingDiamondWithInsuranceContract.sol,traced
+SRC_A4,A4. Issue Insurance,CPDM Activity,F4,IssueInsurance,ContractFunction,function issueInsurance(),P0PurchasingDiamondWithInsuranceContract.sol,traced
+SRC_A5,A5. Arrange Transport,CPDM Activity,F5,ArrangeTransport,ContractFunction,function arrangeTransport(),P0PurchasingDiamondWithInsuranceContract.sol,traced
+SRC_A6,A6. Confirm Delivery,CPDM Activity,F6,ConfirmDelivery,ContractFunction,function confirmDelivery(),P0PurchasingDiamondWithInsuranceContract.sol,traced
+SRC_A7,A7. Quality Control,CPDM Activity,F7,QualityControl,ContractFunction,function qualityControl(),P0PurchasingDiamondWithInsuranceContract.sol,traced
+SRC_A8,A8. Complete Order,CPDM Activity,F8,CompleteOrder,ContractFunction,function completeOrder(),P0PurchasingDiamondWithInsuranceContract.sol,traced
+SRC_D1,D1. Quality Approved?,CPDM Decision,D1,D1. Quality Approved?,Decision,,P0PurchasingDiamondWithInsuranceContract.sol,traced
+SRC_E1,Delivery Confirmed,CPDM Event,EV1,DeliveryConfirmed,BlockchainEvent,event DeliveryConfirmed,P0PurchasingDiamondWithInsuranceContract.sol,traced
+SRC_RISK,Risk Transport,CPDM RiskAssessment,RISK,RISK_TRANSPORT,ExecutionRisk,,P0PurchasingDiamondWithInsuranceContract.sol,traced
+SRC_TRACE,TRC_ALL_EVENTS,CPDM TraceabilityRule,TRACE,TRC_ALL_EVENTS,ExecutionTraceabilityRule,,P0PurchasingDiamondWithInsuranceContract.sol,traced
+SRC_MET,MET_DELIVERY_TIME,CPDM Metric,MET,MET_DELIVERY_TIME,ExecutionMetric,,P0PurchasingDiamondWithInsuranceContract.sol,traced
+SRC_IND,IND_DELIVERY_COMPLIANCE,CPDM Indicator,IND,IND_DELIVERY_COMPLIANCE,ExecutionIndicator,,P0PurchasingDiamondWithInsuranceContract.sol,traced
+SRC_OKR,OKR_DELIVERY,CPDM Objective,OKR,OKR_DELIVERY,ExecutionOKR,,P0PurchasingDiamondWithInsuranceContract.sol,traced
