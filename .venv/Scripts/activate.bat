@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=E:\The Primary Studies Documen\Execution Definition Article\CPEM\CPEM_M2T_Tool_v1_1\.venv
+set VIRTUAL_ENV=E:\The Primary Studies Documen\Execution Definition Article\CPEM\Use Case Diagram of CPDM Final\.venv
 
 if not defined PROMPT set PROMPT=$P$G
 

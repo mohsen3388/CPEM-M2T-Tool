@@ -1,27 +1,50 @@
-# CPEM → Solidity M2T Tool v1.1
+# CPEM-to-Solidity M2T Tool
 
-v1.1 fixes the issues found during live testing with Enterprise Architect:
+This repository contains the supporting Model-to-Text (M2T) tool developed for
+transforming Ethereum-oriented CPEM execution models into Solidity smart-contract
+artifacts.
 
-- resolves `traceFrom` links whose CPDM source is outside the selected CPEM package;
-- when explicit trace connectors are absent, conservatively derives trace links from the repository using M2M-compatible stereotype/name matching and labels them **inferred** in the UI/reports;
-- adds a **Primary SmartContract** selector instead of silently using the first of several contracts;
-- limits generated Solidity functions to functions associated with the selected primary contract and removes duplicate Solidity signatures;
-- removes activity number prefixes from generated Solidity identifiers (`1. Select Diamond` → `selectDiamond()`);
-- fixes Windows execution of `npm.cmd` / `npx.cmd` (the cause of WinError 2); and
-- displays Node.js/npm/npx availability in the UI.
+The tool directly integrates with Enterprise Architect, reads CPEM model elements,
+validates the execution model, performs the CPEM-to-Solidity transformation, and
+generates a Hardhat-compatible project for compilation and testing.
 
-## Run
+## Transformation Pipeline
 
-```powershell
-python -m pip install -r requirements.txt
-python app.py
-```
+CPDM
+→ M2M Transformation
+→ CPEM
+→ CPEM-to-Solidity M2T Tool
+→ Solidity / OpenZeppelin
+→ Hardhat Compilation and Testing
+→ Ethereum Execution
 
-Open Enterprise Architect, select the CPEM package, then click **Connect to Enterprise Architect**.
-Review the automatically preselected Primary SmartContract and change it if necessary.
-Then run **Validate → Generate Solidity + Hardhat → npm install → Compile → Test**.
+## Main Features
 
-## Traceability interpretation
+- Direct integration with Enterprise Architect
+- Import of CPEM models
+- CPEM model validation
+- Model-to-Text transformation
+- Solidity smart-contract generation
+- OpenZeppelin-compatible artifact generation
+- Hardhat project generation
+- CPDM → CPEM → Solidity traceability reporting
+- Generation metrics for experimental validation
 
-`explicit` means an actual `traceFrom` connector exists in the EA repository.
-`inferred-by-M2M-rule/name` means v1.1 derived the correspondence conservatively from the source repository using the transformation-compatible source stereotype and matching identifier/name. The generated report preserves this distinction; inferred links are not presented as explicit EA connectors.
+
+## Related Research Artifacts
+
+This repository focuses on the CPEM-to-Solidity transformation and the
+implementation-level validation of the proposed approach.
+
+The broader modeling and model-driven engineering artifacts are available in the
+companion **CollabChain Platform** repository:
+
+https://github.com/mohsen3388/collabchain-platform
+
+The companion repository contains the broader modeling infrastructure and research
+artifacts developed as part of the underlying research, including modeling,
+transformation, code-generation, and diamond supply-chain case-study resources.
+
+Together, the two repositories support inspection of the complete model-driven chain:
+
+CPDM → M2M → CPEM → M2T → Solidity → Hardhat / Ethereum
