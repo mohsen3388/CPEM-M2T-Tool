@@ -1,0 +1,8 @@
+{
+  "evaluated_trace_elements": 55,
+  "traced_elements": 39,
+  "explicit_trace_links": 0,
+  "inferred_trace_links": 39,
+  "traceability_coverage_percent": 70.91,
+  "cpem_to_solidity_artifacts": 13
+}
